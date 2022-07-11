@@ -3,11 +3,11 @@
 # https://realpython.com/python-rock-paper-scissors/
 # and from https://www.w3schools.com/python/python_dictionaries.asp 
 # and about loops https://www.geeksforgeeks.org/loops-in-python/ and https://www.tutorialspoint.com/python/python_loop_control.htm#
+# which of course led to needing a nested loop... https://pynative.com/python-nested-loops/
 # and random pointers from stackoverflow and google and other w3schools pages...
 import random
 import time
 import os
-from tkinter import END
 player_name = os.getlogin()
 print("Welcome",player_name,"to the battle of wits!")
 while True:
@@ -16,8 +16,6 @@ while True:
     if player_choice not in player_options:
         print("Sorry, that's not a valid choice!")
         break
-#    else:
-#        continue
     computer_options = ["Rock", "Paper", "Scissors"]
     computer_choice = random.choice(computer_options)
     # Lookup of winning hands player_choice : computer_choice
