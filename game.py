@@ -13,8 +13,9 @@ print("Welcome",player_name,"to the battle of wits!")
 while True:
     player_choice=str(input("Rock, Paper, or Scissors?"))
     player_options = ["Rock", "Paper", "Scissors", "rock", "ROCK", "r0ck", "r", "PAPER", "paper", "p", "SCISSORS", "scissors", "scissor", "s"]
-#    if player_choice not in player_options:
-#        print("Sorry, that's not a valid choice!")
+    if player_choice not in player_options:
+        print("Sorry, that's not a valid choice!")
+        break
 #    else:
 #        continue
     computer_options = ["Rock", "Paper", "Scissors"]
