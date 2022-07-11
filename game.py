@@ -2,7 +2,7 @@
 # I got a lot of help from
 # https://realpython.com/python-rock-paper-scissors/
 # and from https://www.w3schools.com/python/python_dictionaries.asp 
-# and about loops https://www.geeksforgeeks.org/loops-in-python/
+# and about loops https://www.geeksforgeeks.org/loops-in-python/ and https://www.tutorialspoint.com/python/python_loop_control.htm#
 # and random pointers from stackoverflow and google and other w3schools pages...
 import random
 import time
@@ -36,7 +36,23 @@ while True:
         "scissor" : "Paper",
         "s" : "Paper",
     }
-
+    # Lookup ties because otherwise you only tie if you use the same case format... annoying...
+    ties = {
+        "Rock": "Rock",
+        "rock": "Rock",
+        "ROCK": "Rock",
+        "r0ck": "Rock",
+        "r": "Rock",
+        "Scissors" : "Scissors",
+        "scissors" : "Scissors",
+        "SCISSORS" : "Scissors",
+        "scissor" : "Scissors",
+        "s" : "Scissors",
+        "Paper" : "Paper",
+        "paper" : "Paper",
+        "PAPER" : "Paper",
+        "p" : "Paper",
+    }
     # From https://python-forum.io/thread-26430.html
     print("   Rock")
     time.sleep(0.2)
@@ -47,13 +63,14 @@ while True:
     print("   Shoot!")
     time.sleep(0.5)
 
-    if player_choice == computer_choice:
+    if ties [player_choice] == computer_choice:
         print(player_name,"you both chose ",player_choice,". It's a tie!")
     elif victories [player_choice] == computer_choice:
         print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". You win!")
     else:
         print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". Sorry, you loose.")
     time.sleep(1)
-    play_again = input("That was fun. Would you like to play again (y/n)?")
-    if play_again != "y" or "yes":
+    play_again = input("That was fun. Would you like to play again? (y/n)")
+    if play_again != "y":
+        print("Thanks for playing",player_name)
         break

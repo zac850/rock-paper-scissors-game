@@ -7,5 +7,6 @@
 1. ``` cd ~Desktop/rock-paper-scissors-game ```
 
 
-## Tell Us who you are!
+## We know your name
+We promise not to sell your name, though.
 ``` PLAYER_NAME="YourNameHere" python game.py ```
