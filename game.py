@@ -3,15 +3,18 @@
 # https://realpython.com/python-rock-paper-scissors/
 # and from https://www.w3schools.com/python/python_dictionaries.asp 
 # and about loops https://www.geeksforgeeks.org/loops-in-python/ and https://www.tutorialspoint.com/python/python_loop_control.htm#
-# which of course led to needing a nested loop... https://pynative.com/python-nested-loops/
-# and random pointers from stackoverflow and google and other w3schools pages...
+# which of course led to needing a nested loop... https://pynative.com/python-nested-loops/ 
+# but I haven't gotten the nested loop work for an invalid choice to bring you back to the choice section of the code...
+# and the internet says that using a "goto" code line is really bad form
+# I also used random pointers from stackoverflow and other w3schools pages that google showed me when I had specific questions...
 import random
 import time
 import os
 player_name = os.getlogin()
 print("Welcome",player_name,"to the battle of wits!")
+time.sleep(0.5)
 while True:
-    player_choice=str(input("Rock, Paper, or Scissors?"))
+    player_choice=str(input("Rock, Paper, or Scissors? "))
     player_options = ["Rock", "Paper", "Scissors", "rock", "ROCK", "r0ck", "r", "PAPER", "paper", "p", "SCISSORS", "scissors", "scissor", "s"]
     if player_choice not in player_options:
         print("Sorry, that's not a valid choice!")
@@ -67,9 +70,9 @@ while True:
     elif victories [player_choice] == computer_choice:
         print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". You win!")
     else:
-        print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". Sorry, you loose.")
+        print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". Sorry, you lose.")
     time.sleep(1)
-    play_again = input("That was fun. Would you like to play again? (y/n)")
+    play_again = input("That was fun. Would you like to play again? (y/n) ")
     if play_again != "y":
         print("Thanks for playing",player_name)
         break

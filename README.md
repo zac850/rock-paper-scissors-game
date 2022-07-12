@@ -20,7 +20,7 @@ Next, activate the virtural enviroment you just made
 
 Now navigate to the folder the game download exists in
 
- ``` cd ~Desktop/rock-paper-scissors-game ```
+ ``` cd ~/Desktop/rock-paper-scissors-game ```
 
 Next step is to install the requirments (there may not be any???)
 
