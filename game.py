@@ -1,5 +1,5 @@
-# do you want to play a game?
-# I got a lot of help from
+# do you want to play a game? - I'm just going to keep making War Games jokes.
+# I got a lot of help from:
 # https://realpython.com/python-rock-paper-scissors/
 # and from https://www.w3schools.com/python/python_dictionaries.asp 
 # and about loops https://www.geeksforgeeks.org/loops-in-python/ and https://www.tutorialspoint.com/python/python_loop_control.htm#
@@ -10,8 +10,9 @@
 import random
 import time
 import os
-player_name = os.getlogin()
-print("Welcome",player_name,"to the battle of wits!")
+# player_name = os.getlogin() #OTHER Approach
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+print("Welcome, "+player_name+", to the battle of wits!")
 time.sleep(0.5)
 while True:
     player_choice=str(input("Rock, Paper, or Scissors? "))
@@ -66,11 +67,11 @@ while True:
     time.sleep(0.5)
 
     if ties [player_choice] == computer_choice:
-        print(player_name,"you both chose ",player_choice,". It's a tie!")
+        print(player_name+", you both chose "+player_choice+". It's a tie!")
     elif victories [player_choice] == computer_choice:
-        print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". You win!")
+        print(player_name+", you chose "+player_choice+" and the computer chose "+computer_choice+". You win!")
     else:
-        print(player_name,"you chose",player_choice,"and the computer chose ",computer_choice,". Sorry, you lose.")
+        print(player_name+", you chose "+player_choice+" and the computer chose "+computer_choice+". Sorry, you lose.")
     time.sleep(1)
     play_again = input("That was fun. Would you like to play again? (y/n) ")
     if play_again != "y":

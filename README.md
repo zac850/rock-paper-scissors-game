@@ -22,9 +22,9 @@ Now navigate to the folder the game download exists in
 
  ``` cd ~/Desktop/rock-paper-scissors-game ```
 
-Next step is to install the requirments (there may not be any???)
+~~Next step is to install the requirments (there aren't any at this point)~~
 
-``` pip install -r requirements.txt ```
+~~``` pip install -r requirements.txt ```~~
 
 Lastly, run the game!
 
@@ -39,6 +39,10 @@ Hopefully you win!
 After that game, you can choose if you want to play again. If you do, type y and hit return/enter. If not, type n (or literally any other thing in the universe) and hit return/enter.
 
 
-### We know your name
+### User Customization!
 
-This game pulls your user name. Don't be scared, we won't use it for nefarious purposes.
+Instead of running ``` python game.py ``` as above, instead run:
+
+```PLAYER_NAME="David" python game.py```
+
+Except replace David with your name.
