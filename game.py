@@ -10,51 +10,41 @@
 import random
 import time
 import os
-# player_name = os.getlogin() #OTHER Approach
+# player_name = os.getlogin()    #OTHER Approach below, but I liked this solution better :)
 player_name = os.getenv("PLAYER_NAME", default="Player One")
 print("Welcome, "+player_name+", to the battle of wits!")
 time.sleep(0.5)
 while True:
     player_choice=str(input("Rock, Paper, or Scissors? "))
-    player_options = ["Rock", "Paper", "Scissors", "rock", "ROCK", "r0ck", "r", "PAPER", "paper", "p", "SCISSORS", "scissors", "scissor", "s"]
+    player_choice = player_choice.lower() #This class note would have saved me a lot of dictonary typing the first time round!
+    player_options = ["rock", "r0ck", "r", "paper", "p", "scissors", "scissor", "s",]
     if player_choice not in player_options:
         print("Sorry, that's not a valid choice!")
         break
-    computer_options = ["Rock", "Paper", "Scissors"]
+    computer_options = ["rock", "paper", "scissors"]
     computer_choice = random.choice(computer_options)
     # Lookup of winning hands player_choice : computer_choice
     victories = {
-        "Rock" : "Scissors",
-        "Paper" : "Rock",
-        "Scissors" : "Paper",
-        "rock" : "Scissors",
-        "ROCK": "Scissors",
-        "r0ck": "Scissors",
-        "r": "Scissors",
-        "PAPER" : "Rock",
-        "paper" : "Rock",
-        "p" : "Rock",
-        "SCISSORS" : "Paper",
-        "scissors" : "Paper",
-        "scissor" : "Paper",
-        "s" : "Paper",
+        "rock" : "scissors",
+        "paper" : "rock",
+        "scissors" : "paper",
+        "r0ck": "scissors",
+        "r": "scissors",
+        "p" : "rock",
+        "scissors" : "paper",
+        "scissor" : "paper",
+        "s" : "paper",
     }
     # Lookup ties because otherwise you only tie if you use the same case format... annoying...
     ties = {
-        "Rock": "Rock",
-        "rock": "Rock",
-        "ROCK": "Rock",
-        "r0ck": "Rock",
-        "r": "Rock",
-        "Scissors" : "Scissors",
-        "scissors" : "Scissors",
-        "SCISSORS" : "Scissors",
-        "scissor" : "Scissors",
-        "s" : "Scissors",
-        "Paper" : "Paper",
-        "paper" : "Paper",
-        "PAPER" : "Paper",
-        "p" : "Paper",
+        "rock": "rock",
+        "r0ck": "rock",
+        "r": "rock",
+        "scissors" : "scissors",
+        "scissor" : "scissors",
+        "s" : "scissors",
+        "paper" : "paper",
+        "p" : "paper",
     }
     # From https://python-forum.io/thread-26430.html
     print("   Rock")
@@ -75,5 +65,5 @@ while True:
     time.sleep(1)
     play_again = input("That was fun. Would you like to play again? (y/n) ")
     if play_again != "y":
-        print("Thanks for playing",player_name)
+        print("Thanks for playing "+player_name+"!")
         break

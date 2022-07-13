@@ -1,34 +1,35 @@
 # Welcome
 
 ## Prerequisites
-
 * Anaconda 3.7+
 * Python 3.7+
-* Pip
 
 ## Setup
-
 First, download (clone) to your desktop
 
-Then, in your command line, create a virtural enviroment (only need to do this the first time)
+Then, in your command line (like Terminal), create a virtural enviroment (you only need to do this the first time):
 
- ``` conda create -n rock-paper-scissors python=3.8 ``` 
+ ```sh
+ conda create -n rock-paper-scissors python=3.8
+ ``` 
 
-Next, activate the virtural enviroment you just made
+Next, activate the virtural enviroment you just made:
 
- ``` conda activate rock-paper-scissors ```
+ ```sh
+ conda activate rock-paper-scissors
+ ```
 
-Now navigate to the folder the game download exists in
+Now navigate to the folder the game download exists in (should be your desktop, if you followed step 1):
 
- ``` cd ~/Desktop/rock-paper-scissors-game ```
+ ```sh
+ cd ~/Desktop/rock-paper-scissors-game
+ ```
 
-~~Next step is to install the requirments (there aren't any at this point)~~
+Lastly, run the game:
 
-~~``` pip install -r requirements.txt ```~~
-
-Lastly, run the game!
-
-``` python game.py ```
+```sh
+python game.py
+```
 
 ## Gameplay
 
@@ -36,13 +37,15 @@ When asked "Rock, Paper, or Scissors?", choose one by typing it in and then hitt
 
 Hopefully you win!
 
-After that game, you can choose if you want to play again. If you do, type y and hit return/enter. If not, type n (or literally any other thing in the universe) and hit return/enter.
+After that game, you can choose if you want to play again. If you do, type y and hit return/enter. If not, type n and hit return/enter.
 
 
-### User Customization!
+## User Customization!
 
-Instead of running ``` python game.py ``` as above, instead run:
+Instead of running ```python game.py``` as above, instead run:
 
-```PLAYER_NAME="David" python game.py```
+```sh
+PLAYER_NAME="David" python game.py
+```
 
-Except replace David with your name.
+Except replace David with your name (your name needs to be in quotes, like ```"David"``` above)
