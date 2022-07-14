@@ -5,7 +5,7 @@
 # and about loops https://www.geeksforgeeks.org/loops-in-python/ and https://www.tutorialspoint.com/python/python_loop_control.htm#
 # which of course led to needing a nested loop... https://pynative.com/python-nested-loops/ 
 # but I haven't gotten the nested loop work for an invalid choice to bring you back to the choice section of the code...
-# and the internet says that using a "goto" code line is really bad form
+# and the internet says that using a "goto" code line is really bad form, so not going to do that.
 # I also used random pointers from stackoverflow and other w3schools pages that google showed me when I had specific questions...
 import random
 import time
@@ -16,7 +16,7 @@ print("Welcome, "+player_name+", to the battle of wits!")
 time.sleep(0.5)
 while True:
     player_choice=str(input("Rock, Paper, or Scissors? "))
-    player_choice = player_choice.lower() #This class note would have saved me a lot of dictonary typing the first time round!
+    player_choice = player_choice.lower() #Best class note!
     player_options = ["rock", "r0ck", "r", "paper", "p", "scissors", "scissor", "s",]
     if player_choice not in player_options:
         print("Sorry, that's not a valid choice!")
@@ -35,7 +35,7 @@ while True:
         "scissor" : "paper",
         "s" : "paper",
     }
-    # Lookup ties because otherwise you only tie if you use the same case format... annoying...
+    # Lookup ties to allow for singular scissor to tie with plural scissors, ex...
     ties = {
         "rock": "rock",
         "r0ck": "rock",
@@ -46,7 +46,7 @@ while True:
         "paper" : "paper",
         "p" : "paper",
     }
-    # From https://python-forum.io/thread-26430.html
+    # Concept from https://python-forum.io/thread-26430.html
     print("   Rock")
     time.sleep(0.2)
     print("   Paper")

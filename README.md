@@ -2,12 +2,12 @@
 
 ## Prerequisites
 * Anaconda 3.7+
-* Python 3.7+
+* Python 3.8+
 
 ## Setup
 First, download (clone) to your desktop
 
-Then, in your command line (like Terminal), create a virtural enviroment (you only need to do this the first time):
+Then, in your command line (e.g. Terminal), create a virtural enviroment (you only need to do this the first time):
 
  ```sh
  conda create -n rock-paper-scissors python=3.8
